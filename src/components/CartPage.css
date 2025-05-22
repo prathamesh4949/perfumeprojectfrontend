@@ -1,0 +1,249 @@
+.cart-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9, #e8ecef);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart-page h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart-empty p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-view {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-view:hover {
+  background: linear-gradient(to right, #ff6a7f, #ff709b);
+  transform: scale(1.05);
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+}
+
+.cart-item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cart-item-info {
+  flex: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cart-item-info h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  font-size: 1.2rem;
+  color: #e91e63;
+  margin-bottom: 5px;
+}
+
+.cart-item-brand {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.cart-item-size {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.quantity-controls button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quantity-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.quantity-controls button:hover:not(:disabled) {
+  background: #e91e63;
+}
+
+.quantity-controls span {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.cart-item-subtotal {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.btn-remove {
+  background: #fff;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-remove:hover {
+  background: #ff69b4;
+  color: #fff;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  text-align: right;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cart-summary h3 {
+  font-size: 1.8rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-checkout {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-checkout:hover {
+  background: linear-gradient(to right, #ff6a7f, #ff709b);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .cart-item-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .cart-item-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .cart-item-price,
+  .cart-item-subtotal,
+  .cart-item-brand,
+  .cart-item-size {
+    font-size: 1rem;
+  }
+
+  .quantity-controls button {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .btn-remove {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .cart-summary {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .cart-summary h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn-checkout {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

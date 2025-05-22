@@ -1,0 +1,129 @@
+.checkout-page {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f9f9f9, #e8ecef);
+  border-radius: 15px;
+  min-height: 80vh;
+}
+
+.checkout-page h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+.checkout-summary {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkout-summary h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.checkout-item:hover {
+  background: #f9f9f9;
+}
+
+.checkout-item-details p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 2px 0;
+}
+
+.checkout-item p:last-child {
+  font-size: 1.1rem;
+  color: #e91e63;
+  font-weight: 600;
+}
+
+.checkout-summary h3:last-of-type {
+  color: #e91e63;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.btn-confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+}
+
+.btn-confirm:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  background: linear-gradient(to right, #ff6a7f, #ff709b);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.3);
+}
+
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .checkout-summary {
+    padding: 15px;
+  }
+
+  .checkout-item-details p,
+  .checkout-item p:last-child {
+    font-size: 1rem;
+  }
+
+  .btn-confirm {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

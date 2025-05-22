@@ -1,0 +1,121 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 20px;
+}
+
+/* Add a semi-transparent overlay to improve readability */
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+/* Style the auth-box (inner container for the form) */
+.auth-box {
+  position: relative;
+  z-index: 2; /* Ensure the form is above the overlay */
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff69b4; /* Hot pink from original */
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.auth-box label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.auth-box input:focus {
+  border-color: #ff69b4; /* Hot pink on focus */
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff69b4; /* Hot pink from original */
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-box button:hover {
+  background-color: #ff1493; /* Darker pink on hover, from original */
+}
+
+.auth-box p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.auth-box a {
+  color: #ff69b4; /* Hot pink link color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .auth-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-box input,
+  .auth-box button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .auth-box p {
+    font-size: 0.9rem;
+  }
+}
